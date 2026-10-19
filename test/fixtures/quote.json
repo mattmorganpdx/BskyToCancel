@@ -1,0 +1,78 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:alicexxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3quote0000001",
+      "cid": "bafyreipost3quote0000001",
+      "author": {
+        "did": "did:plc:alicexxxxxxxxxxxxxxxxxxx",
+        "handle": "alice.example.com",
+        "displayName": "Alice Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiavataralice",
+        "labels": [],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T17:33:14.318Z",
+        "langs": [
+          "en"
+        ],
+        "text": "Called it. More at example.com/robins",
+        "facets": [
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://example.com/robins"
+              }
+            ],
+            "index": {
+              "byteStart": 19,
+              "byteEnd": 37
+            }
+          }
+        ]
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T17:33:14.318Z",
+      "labels": [],
+      "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+          "$type": "app.bsky.embed.record#viewRecord",
+          "uri": "at://did:plc:bobxxxxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3quoted000001",
+          "cid": "bafyreipost3quoted000001",
+          "author": {
+            "did": "did:plc:bobxxxxxxxxxxxxxxxxxxxxx",
+            "handle": "bob.example.com",
+            "displayName": "Bob Example",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bobxxxxxxxxxxxxxxxxxxxxx/bafkreiavatarbob",
+            "labels": [],
+            "createdAt": "2024-01-01T00:00:00.000Z"
+          },
+          "value": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2026-10-19T17:33:14.318Z",
+            "langs": [
+              "en"
+            ],
+            "text": "The feeder has been restocked. Chaos expected."
+          },
+          "labels": [],
+          "likeCount": 7,
+          "replyCount": 1,
+          "repostCount": 0,
+          "quoteCount": 0,
+          "indexedAt": "2026-10-19T17:33:14.318Z",
+          "embeds": []
+        }
+      }
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost"
+  }
+}

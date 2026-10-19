@@ -1,0 +1,92 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:alicexxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3quotemedia01",
+      "cid": "bafyreipost3quotemedia01",
+      "author": {
+        "did": "did:plc:alicexxxxxxxxxxxxxxxxxxx",
+        "handle": "alice.example.com",
+        "displayName": "Alice Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiavataralice",
+        "labels": [],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T17:33:14.318Z",
+        "langs": [
+          "en"
+        ],
+        "text": ""
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T17:33:14.318Z",
+      "labels": [],
+      "embed": {
+        "$type": "app.bsky.embed.recordWithMedia#view",
+        "media": {
+          "$type": "app.bsky.embed.images#view",
+          "images": [
+            {
+              "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiimg0",
+              "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiimg0",
+              "alt": "A screenshot of the blog post's first paragraph",
+              "aspectRatio": {
+                "width": 1600,
+                "height": 1200
+              }
+            }
+          ]
+        },
+        "record": {
+          "$type": "app.bsky.embed.record#view",
+          "record": {
+            "$type": "app.bsky.embed.record#viewRecord",
+            "uri": "at://did:plc:bobxxxxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3quotedvid001",
+            "cid": "bafyreipost3quotedvid001",
+            "author": {
+              "did": "did:plc:bobxxxxxxxxxxxxxxxxxxxxx",
+              "handle": "bob.example.com",
+              "displayName": "Bob Example",
+              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bobxxxxxxxxxxxxxxxxxxxxx/bafkreiavatarbob",
+              "labels": [],
+              "createdAt": "2024-01-01T00:00:00.000Z"
+            },
+            "value": {
+              "$type": "app.bsky.feed.post",
+              "createdAt": "2026-10-19T17:33:14.318Z",
+              "langs": [
+                "en"
+              ],
+              "text": "Wrote a blog post and recorded a walkthrough."
+            },
+            "labels": [],
+            "likeCount": 7,
+            "replyCount": 1,
+            "repostCount": 0,
+            "quoteCount": 0,
+            "indexedAt": "2026-10-19T17:33:14.318Z",
+            "embeds": [
+              {
+                "$type": "app.bsky.embed.video#view",
+                "cid": "bafkreivideo",
+                "playlist": "https://video.bsky.app/watch/did%3Aplc%3Abobxxxxxxxxxxxxxxxxxxxxx/bafkreivideo/playlist.m3u8",
+                "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Abobxxxxxxxxxxxxxxxxxxxxx/bafkreivideo/thumbnail.jpg",
+                "aspectRatio": {
+                  "width": 720,
+                  "height": 1280
+                },
+                "presentation": "default"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost"
+  }
+}

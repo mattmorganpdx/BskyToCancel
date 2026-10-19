@@ -1,0 +1,62 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:alicexxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3reply0000001",
+      "cid": "bafyreipost3reply0000001",
+      "author": {
+        "did": "did:plc:alicexxxxxxxxxxxxxxxxxxx",
+        "handle": "alice.example.com",
+        "displayName": "Alice Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiavataralice",
+        "labels": [],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T19:50:30.507Z",
+        "langs": [
+          "en"
+        ],
+        "text": "A baffle and a lot of patience."
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T19:50:30.507Z",
+      "labels": []
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost",
+    "parent": {
+      "post": {
+        "uri": "at://did:plc:bobxxxxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3parent000001",
+        "cid": "bafyreipost3parent000001",
+        "author": {
+          "did": "did:plc:bobxxxxxxxxxxxxxxxxxxxxx",
+          "handle": "bob.example.com",
+          "displayName": "Bob Example",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bobxxxxxxxxxxxxxxxxxxxxx/bafkreiavatarbob",
+          "labels": [],
+          "createdAt": "2024-01-01T00:00:00.000Z"
+        },
+        "record": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2026-10-19T19:40:00.000Z",
+          "langs": [
+            "en"
+          ],
+          "text": "What's the best way to keep squirrels off a bird feeder?"
+        },
+        "replyCount": 3,
+        "repostCount": 5,
+        "quoteCount": 1,
+        "likeCount": 42,
+        "indexedAt": "2026-10-19T19:40:00.000Z",
+        "labels": []
+      },
+      "threadContext": {},
+      "$type": "app.bsky.feed.defs#threadViewPost"
+    }
+  }
+}

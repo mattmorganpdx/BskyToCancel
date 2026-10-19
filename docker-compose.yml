@@ -1,0 +1,14 @@
+# The fixed project name keeps a deploy into a differently named directory
+# from starting a second copy of the bot.
+name: bskytocancel
+
+services:
+  bskytocancel:
+    container_name: bskytocancel
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"

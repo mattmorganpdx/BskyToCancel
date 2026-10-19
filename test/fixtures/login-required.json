@@ -1,0 +1,39 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:carolxxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3loginreq0001",
+      "cid": "bafyreipost3loginreq0001",
+      "author": {
+        "did": "did:plc:carolxxxxxxxxxxxxxxxxxxx",
+        "handle": "carol.example.com",
+        "displayName": "Carol Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:carolxxxxxxxxxxxxxxxxxxx/bafkreiavatarcarol",
+        "labels": [
+          {
+            "src": "did:plc:carolxxxxxxxxxxxxxxxxxxx",
+            "uri": "at://did:plc:carolxxxxxxxxxxxxxxxxxxx/app.bsky.actor.profile/self",
+            "val": "!no-unauthenticated",
+            "cts": "1970-01-01T00:00:00.000Z"
+          }
+        ],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T17:33:14.318Z",
+        "langs": [
+          "en"
+        ],
+        "text": "Only visible to signed-in users on bsky.app ✨"
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T17:33:14.318Z",
+      "labels": []
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost"
+  }
+}

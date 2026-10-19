@@ -1,0 +1,41 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:bobxxxxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3external0001",
+      "cid": "bafyreipost3external0001",
+      "author": {
+        "did": "did:plc:bobxxxxxxxxxxxxxxxxxxxxx",
+        "handle": "bob.example.com",
+        "displayName": "Bob Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bobxxxxxxxxxxxxxxxxxxxxx/bafkreiavatarbob",
+        "labels": [],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T17:33:14.318Z",
+        "langs": [
+          "en"
+        ],
+        "text": "Good read on backyard birding."
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T17:33:14.318Z",
+      "labels": [],
+      "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+          "uri": "https://example.com/articles/backyard-birding",
+          "title": "A Beginner's Guide to Backyard Birding",
+          "description": "Feeders, field guides, and how to tell a house finch from a purple finch.",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:bobxxxxxxxxxxxxxxxxxxxxx/bafkreithumb"
+        }
+      }
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost"
+  }
+}

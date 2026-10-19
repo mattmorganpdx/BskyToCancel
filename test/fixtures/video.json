@@ -1,0 +1,43 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:bobxxxxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3video0000001",
+      "cid": "bafyreipost3video0000001",
+      "author": {
+        "did": "did:plc:bobxxxxxxxxxxxxxxxxxxxxx",
+        "handle": "bob.example.com",
+        "displayName": "Bob Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bobxxxxxxxxxxxxxxxxxxxxx/bafkreiavatarbob",
+        "labels": [],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T17:33:14.318Z",
+        "langs": [
+          "en"
+        ],
+        "text": "Morning at the feeder 🐦"
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T17:33:14.318Z",
+      "labels": [],
+      "embed": {
+        "$type": "app.bsky.embed.video#view",
+        "cid": "bafkreivideo",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3Abobxxxxxxxxxxxxxxxxxxxxx/bafkreivideo/playlist.m3u8",
+        "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Abobxxxxxxxxxxxxxxxxxxxxx/bafkreivideo/thumbnail.jpg",
+        "aspectRatio": {
+          "width": 720,
+          "height": 1280
+        },
+        "presentation": "default"
+      }
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost"
+  }
+}

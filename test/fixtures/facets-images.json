@@ -1,0 +1,87 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:alicexxxxxxxxxxxxxxxxxxx/app.bsky.feed.post/3facetsimg001",
+      "cid": "bafyreipost3facetsimg001",
+      "author": {
+        "did": "did:plc:alicexxxxxxxxxxxxxxxxxxx",
+        "handle": "alice.example.com",
+        "displayName": "Alice Example",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiavataralice",
+        "labels": [],
+        "createdAt": "2024-01-01T00:00:00.000Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-19T17:33:14.318Z",
+        "langs": [
+          "en"
+        ],
+        "text": "#BirdOfTheDay #birdsky\n\nTwo robins arguing over the feeder ‘politely’.\n\n📸 @bob.example.com",
+        "facets": [
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "BirdOfTheDay"
+              }
+            ],
+            "index": {
+              "byteStart": 0,
+              "byteEnd": 13
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "birdsky"
+              }
+            ],
+            "index": {
+              "byteStart": 14,
+              "byteEnd": 22
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#mention",
+                "did": "did:plc:bobxxxxxxxxxxxxxxxxxxxxx"
+              }
+            ],
+            "index": {
+              "byteStart": 81,
+              "byteEnd": 97
+            }
+          }
+        ]
+      },
+      "replyCount": 3,
+      "repostCount": 5,
+      "quoteCount": 1,
+      "likeCount": 42,
+      "indexedAt": "2026-10-19T17:33:14.318Z",
+      "labels": [],
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiimg0",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:alicexxxxxxxxxxxxxxxxxxx/bafkreiimg0",
+            "alt": "Two robins on a bird feeder",
+            "aspectRatio": {
+              "width": 1600,
+              "height": 1200
+            }
+          }
+        ]
+      }
+    },
+    "threadContext": {},
+    "$type": "app.bsky.feed.defs#threadViewPost"
+  }
+}
