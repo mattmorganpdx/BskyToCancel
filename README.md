@@ -53,7 +53,9 @@ The bot needs Node 22.18 or later, which runs the TypeScript directly with no bu
 
 ### 3. Invite it
 
-The bot only sees channels it belongs to. Run `/invite @BskyToCancel` in each channel where it should work.
+The bot only sees channels it belongs to. Run `/invite @BskyToCancel` in each channel where it should work. If you post a link and nothing happens, the bot probably isn't in that channel yet.
+
+The bot logs a line for each repost. To see every event Slack sends it, restart it with `LOG_LEVEL=debug docker compose up -d`. Debug output includes the text of every message in its channels, so run plain `docker compose up -d` afterward to switch it back.
 
 ## Development
 

@@ -1,4 +1,4 @@
-import { App, type webApi } from '@slack/bolt';
+import { App, LogLevel, type webApi } from '@slack/bolt';
 import { fetchThread, findPostRefs } from './bluesky.ts';
 import { type SlackMessage, renderPost, withoutImages } from './render.ts';
 
@@ -9,6 +9,7 @@ const app = new App({
   token: requireEnv('SLACK_BOT_TOKEN'),
   appToken: requireEnv('SLACK_APP_TOKEN'),
   socketMode: true,
+  logLevel: process.env.LOG_LEVEL === 'debug' ? LogLevel.DEBUG : LogLevel.INFO,
 });
 
 // Slack redelivers events it thinks went unacknowledged, so remember recent
@@ -36,6 +37,7 @@ app.message(async ({ message, client, logger }) => {
         continue;
       }
       await reply(client, message.channel, threadTs, renderPost(thread, ref.url));
+      logger.info(`Reposted ${ref.url} in ${message.channel}`);
     } catch (err) {
       logger.error(`Failed to repost ${ref.url}`, err);
     }

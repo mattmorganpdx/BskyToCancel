@@ -7,6 +7,9 @@ services:
     container_name: bskytocancel
     build: .
     env_file: .env
+    environment:
+      # `LOG_LEVEL=debug docker compose up -d` logs every event Slack sends.
+      LOG_LEVEL: ${LOG_LEVEL:-info}
     restart: unless-stopped
     logging:
       options:
