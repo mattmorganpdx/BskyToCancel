@@ -51,9 +51,15 @@ ssh your-server 'cd bskytocancel && docker compose up -d --build'
 
 The bot needs Node 22.18 or later, which runs the TypeScript directly with no build step.
 
-### 3. Invite it
+### 3. Channels
 
-The bot only sees channels it belongs to. Run `/invite @BskyToCancel` in each channel where it should work. If you post a link and nothing happens, the bot probably isn't in that channel yet.
+The bot only sees channels it belongs to. At startup and once a day after that, it joins every public channel it isn't in yet, so a new channel is covered within a day without an invite. It logs the channels it joins. It skips channels shared with other organizations, so reposts don't reach people outside your workspace.
+
+Private and shared channels still need an invite: run `/invite @BskyToCancel` there. If you post a link and nothing happens, the bot probably isn't in that channel yet.
+
+To pick the bot's channels by hand instead, set `AUTO_JOIN_CHANNELS=false` in `.env` and invite it where you want it. A channel it has joined can remove it with `/kick @BskyToCancel`, but with auto-join on, the next sweep joins that channel again.
+
+If you created the app before auto-join existed, add the `channels:read` and `channels:join` bot scopes under **OAuth & Permissions** (or paste in the updated manifest), then reinstall the app. Until then the bot logs `Channel sweep failed: missing_scope` and keeps working in the channels it's already in.
 
 The bot logs a line for each repost. To see every event Slack sends it, restart it with `LOG_LEVEL=debug docker compose up -d`. Debug output includes the text of every message in its channels, so run plain `docker compose up -d` afterward to switch it back.
 
