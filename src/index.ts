@@ -1,9 +1,13 @@
 import { App, LogLevel, type webApi } from '@slack/bolt';
 import { fetchThread, findPostRefs } from './bluesky.ts';
+import { isEnabled, joinPublicChannels, slackError } from './channels.ts';
 import { type SlackMessage, renderPost, withoutImages } from './render.ts';
 
 // One message full of links shouldn't turn into a wall of reposts.
 const MAX_POSTS_PER_MESSAGE = 4;
+
+// How often to look for public channels the bot hasn't joined yet.
+const CHANNEL_SWEEP_MS = 24 * 60 * 60 * 1000;
 
 const app = new App({
   token: requireEnv('SLACK_BOT_TOKEN'),
@@ -50,8 +54,21 @@ async function reply(client: webApi.WebClient, channel: string, threadTs: string
     await client.chat.postMessage({ ...args, ...msg });
   } catch (err) {
     // Slack rejects the whole message when it can't fetch any one image.
-    if ((err as { data?: { error?: string } }).data?.error !== 'invalid_blocks') throw err;
+    if (slackError(err) !== 'invalid_blocks') throw err;
     await client.chat.postMessage({ ...args, ...withoutImages(msg) });
+  }
+}
+
+async function sweepChannels() {
+  try {
+    await joinPublicChannels(app.client, app.logger);
+  } catch (err) {
+    const error = slackError(err);
+    const hint =
+      error === 'missing_scope'
+        ? ' Add the channels:read and channels:join scopes and reinstall the app (see README.md).'
+        : '';
+    app.logger.warn(`Channel sweep failed: ${error}.${hint}`);
   }
 }
 
@@ -64,11 +81,19 @@ function requireEnv(name: string): string {
   return value;
 }
 
+let sweepTimer: NodeJS.Timeout | undefined;
+
 for (const signal of ['SIGINT', 'SIGTERM'] as const) {
   process.once(signal, () => {
+    clearInterval(sweepTimer);
     void app.stop().finally(() => process.exit(0));
   });
 }
 
 await app.start();
 app.logger.info('BskyToCancel is watching for Bluesky links');
+
+if (isEnabled(process.env.AUTO_JOIN_CHANNELS)) {
+  await sweepChannels();
+  sweepTimer = setInterval(() => void sweepChannels(), CHANNEL_SWEEP_MS);
+}
